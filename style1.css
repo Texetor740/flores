@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('fondo2.png'); 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recuadro {
+    width: 90%; /* Usar el 90% para pantallas pequeñas */
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    height: auto; 
+    background-color: white;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.carrusel {
+    margin-top: 20px; 
+    width: 100%; /* Ancho completo para responsividad */
+    display: flex; 
+    justify-content: center; 
+    overflow: hidden; /* Ocultar el desbordamiento para el carrusel */
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Evitar que los elementos se reduzcan */
+    width: 100%; /* Asegurar que cada elemento ocupe el ancho completo */
+    height: 400px; 
+    transition: transform 0.5s ease; /* Transiciones suaves */
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; /* Eliminar espacios en blanco de las imágenes */
+}
+
+@media (max-width: 768px) {
+    .recuadro {
+        width: 95%; /* Ajustar ancho en pantallas más pequeñas */
+        padding: 15px; /* Reducir el espaciado interno */
+    }
+    .carousel-item {
+        height: 300px; /* Ajustar altura para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .recuadro {
+        padding: 10px; /* Menos espaciado interno */
+    }
+    .carousel-item {
+        height: 250px; /* Altura más pequeña para dispositivos móviles */
+    }
+}
